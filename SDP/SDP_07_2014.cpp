@@ -74,7 +74,8 @@ void myMerge(Node* start1, Node* start2)
         {
             curr1 = curr1 -> next;
         }
-    } while (curr1-> next != start1);
+    }
+    while (curr1-> next != start1);
 
     // merge if possible
 
@@ -88,12 +89,12 @@ void myMerge(Node* start1, Node* start2)
         first1 -> next = second2 -> next;
         first2 -> next = second1 -> next;
 
-        cout<<"MERGED"<<endl;
+        cout<<"MERGED LIST"<<endl;
         print(start1);
     }
     else
     {
-        cout<<"MERGE IMPOSSIBLE, Call Tom Cruise"<<endl;
+        cout<<"MERGE IMPOSSIBLE"<<endl;
     }
 }
 
@@ -102,28 +103,28 @@ int main()
     Node* sixth1 =  new Node(nullptr, 3);
     Node* fifth1 = new Node(sixth1, 5);
     Node* fourth1 = new Node(fifth1, 4);
-	Node* third1 = new Node(fourth1, 3);
-	Node* second1 = new Node(third1, 2);
-	Node* start1 = new Node(second1, 1);
+    Node* third1 = new Node(fourth1, 3);
+    Node* second1 = new Node(third1, 2);
+    Node* start1 = new Node(second1, 1);
 
-	sixth1->next = start1;
+    sixth1->next = start1;
 
-	cout<<"First list: "<<endl;
-	print(start1);
-	cout<<endl;
+    cout<<"First list: "<<endl;
+    print(start1);
+    cout<<endl;
 
     Node* fifth2 = new Node(nullptr, 3);
     Node* fourth2 = new Node(fifth2, 4);
-	Node* third2 = new Node(fourth2, 8);
-	Node* second2 = new Node(third2, 5);
-	Node* start2 = new Node(second2, 2);
+    Node* third2 = new Node(fourth2, 8);
+    Node* second2 = new Node(third2, 5);
+    Node* start2 = new Node(second2, 2);
 
-	fifth2->next = start2;
+    fifth2->next = start2;
 
-	cout<<"Second list: "<<endl;
-	print(start2);
-	cout<<endl<<endl;
+    cout<<"Second list: "<<endl;
+    print(start2);
+    cout<<endl<<endl;
 
-	myMerge(start1, start2);
+    myMerge(start1, start2);
     return 0;
 }
