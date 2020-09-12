@@ -70,4 +70,3 @@ join outcomes o2 on o1.ship = o2.ship
 join battles b2 on o2.BATTLE = b2.name
 where o1.result = 'damaged' and b1.DATE < b2.date
 
-
